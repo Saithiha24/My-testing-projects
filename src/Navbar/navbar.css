@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.Navbar{
+    margin-bottom: 40px;
+}
+.bar{
+    display: flex;
+    background-color: rgb(231, 78, 78);
+    position: relative;
+    padding: 10px;
+}
+
+.bar .menu{
+    margin-left: 100px;
+}
+.bar  h1{
+    color: white;
+    font-size: 26px;
+}
+
+.bar .menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 100px;
+    cursor: pointer;
+
+}
+
+ .news{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+ .news a{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
+}

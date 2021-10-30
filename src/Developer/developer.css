@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+}
+
+.container .box{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-gap: 50px;
+    margin: 0px 50px;
+    box-shadow: 3px 5px 20px rgba(0,0,0,0.2);
+}
+
+.container .box .imgBx{
+    width: 300px;
+}
+
+.container .box .imgBx img{
+    width: 250px;
+}
+
+.container .info{
+    margin-top:100px;
+}
+.container .info h3{
+    margin-top:10px;
+    display: flex;
+}
+.container .info h3 span{
+    margin-left: 20px;
+}
+
+.container .info .sci-menu{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.container .info .sci-menu a{
+    font-size: 50px;
+    margin-left: 30px;
+    text-decoration: none;
+}
