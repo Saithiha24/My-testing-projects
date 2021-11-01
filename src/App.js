@@ -9,6 +9,7 @@ import Teach from "./Teach/Teach";
 import Home from "./Home/Home";
 import Developer from "./Developer/Developer";
 import NewsDetail from "./NewsDetail/NewsDetail";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/developer'><Developer/></Route>
         <Route exact path='/detail/:id'><NewsDetail/></Route>
       </Switch>
+      <Footer/>
       </Router>
       
     </div>

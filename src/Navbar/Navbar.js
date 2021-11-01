@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
-const [load, setload] = useState(true);
+const [load, setload] = useState(false);
 
 const handleload = ()=>{
     setload(!load);
 }
 
     return (
-        <div className = 'Navbar'>
+        <div className = 'Navbar' id="Navar">
         <div className='bar'>
           <h1>NFYG (News For Your Grandpa)</h1> 
           <div className='menu'>

@@ -1,0 +1,23 @@
+.arrow{
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+
+}
+
+.arrow a{
+    font-size: 25px;
+    background-color:  rgb(231, 78, 78);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width:400px){
+    .arrow{
+        right: 10px;
+    }
+    .arrow a{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+}

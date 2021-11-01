@@ -33,7 +33,28 @@ a{
     text-decoration: none;
     color: black;
 }
-
+.card .imgBx span{
+color: grey;
+margin-top: 10px;
+}
 .card .imgBx:hover{
     box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75);
+}
+
+@media (max-width:770px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width:400px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .card .imgBx{
+        width: 300px;
+    }
+    .card .imgBx img{
+        width: 250px;
+    }
 }
