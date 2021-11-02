@@ -5,7 +5,7 @@ const Arrow = () => {
   
     return (
         <div className='arrow'>
-    <a href='#Navar'><i class="fas fa-arrow-up"></i></a>
+    <a href='#Navar'><i className="fas fa-arrow-up"></i></a>
         </div>
     )
 }

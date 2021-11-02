@@ -20,14 +20,14 @@ const handleload = ()=>{
 }
 
     return (
-        <div className = 'Navbar' id="Navar">
+        <div className ='Navbar' id="Navar">
       <div className='bar'>
           <h1>NFYG (News For Your Grandpa)</h1> 
           <div className='toggle'>
             <h2 onClick={()=>{
             setmobileNavbar(!mobileNavbar)
         }
-        }><i class="fas fa-bars"></i></h2>
+        }><i className="fas fa-bars"></i></h2>
            </div>
           {navload ?  <div className='menu'>
           <Link to='/' onClick={()=>
@@ -36,10 +36,10 @@ const handleload = ()=>{
             }} >Home</Link> 
           <a href="#" onClick={handleload}>News</a>
           <Link to='/developer'>Developers</Link>
-          <h2 onClick={()=>{setnavload(!navload)}}><i class="fas fa-search"></i></h2>
+          <h2 onClick={()=>{setnavload(!navload)}}><i className="fas fa-search"></i></h2>
           </div> :
           <div className='input'>
-           <h2><i class="fas fa-search"></i></h2>
+           <h2><i className="fas fa-search" onClick={()=>{setnavload(!navload)}}></i></h2>
           <input type='text' placeholder="Serch the field you would like to read"
           value={text}
            onChange={(e)=>settext(e.target.value)}

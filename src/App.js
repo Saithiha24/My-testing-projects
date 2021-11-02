@@ -22,11 +22,9 @@ function App() {
         <Route exact path='/teachnology'><Teach /></Route>
         <Route exact path='/developer'><Developer/></Route>
         <Route exact path='/detail/:id'><NewsDetail/></Route>
-       
       </Switch>
       <Footer/>
       </Router>
-      
     </div>
   );
 }
