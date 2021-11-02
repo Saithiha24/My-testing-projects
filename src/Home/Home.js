@@ -4,16 +4,14 @@ import useFetch from '../useFetch';
 import {APIKey} from '../Api/apikey'
 import { BaseURL } from '../Api/newsapi';
 import { useSelector } from 'react-redux';
-import './home.css'
+
 
 
 const Home = () => {
-    const serchText = "example";
+    const serchText = useSelector(state=>state.serch.text);
     const url = `${BaseURL}?q=${serchText}&token=${APIKey}`;
     const {error,isloading} = useFetch(url);
     const news = useSelector(state => state.news.getNews)
-   
-    
     return (
         <>
         {isloading && <h2>Loading.... Please Wait</h2>}

@@ -11,6 +11,7 @@ import Developer from "./Developer/Developer";
 import NewsDetail from "./NewsDetail/NewsDetail";
 import Footer from "./Footer/Footer";
 
+
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/teachnology'><Teach /></Route>
         <Route exact path='/developer'><Developer/></Route>
         <Route exact path='/detail/:id'><NewsDetail/></Route>
+       
       </Switch>
       <Footer/>
       </Router>

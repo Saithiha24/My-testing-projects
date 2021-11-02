@@ -2,31 +2,62 @@ import React from 'react'
 import './navbar.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { serchText } from '../redux/serchSlice';
+import { useDispatch } from 'react-redux';
+import Mnavbar from '../MoboNavbar/Mnavbar';
+
+
 
 
 const Navbar = () => {
 const [load, setload] = useState(false);
-
+const [navload, setnavload] = useState(true);
+const [mobileNavbar, setmobileNavbar] = useState(false);
+const [text, settext] = useState('')
+const dispatch = useDispatch();
 const handleload = ()=>{
     setload(!load);
 }
 
     return (
         <div className = 'Navbar' id="Navar">
-        <div className='bar'>
+      <div className='bar'>
           <h1>NFYG (News For Your Grandpa)</h1> 
-          <div className='menu'>
-          <Link to='/'>Home</Link> 
+          <div className='toggle'>
+            <h2 onClick={()=>{
+            setmobileNavbar(!mobileNavbar)
+        }
+        }><i class="fas fa-bars"></i></h2>
+           </div>
+          {navload ?  <div className='menu'>
+          <Link to='/' onClick={()=>
+            {settext('example');
+            dispatch(serchText(text));
+            }} >Home</Link> 
           <a href="#" onClick={handleload}>News</a>
           <Link to='/developer'>Developers</Link>
-          </div>
-          </div>
-     {load ? <div className="news">
+          <h2 onClick={()=>{setnavload(!navload)}}><i class="fas fa-search"></i></h2>
+          </div> :
+          <div className='input'>
+           <h2><i class="fas fa-search"></i></h2>
+          <input type='text' placeholder="Serch the field you would like to read"
+          value={text}
+           onChange={(e)=>settext(e.target.value)}
+           onKeyUp={(event)=>{
+            if (event.keyCode === 13) {
+                setnavload(!navload);
+                dispatch(serchText(text));
+              }
+           }}
+           />
+          </div> }
+          </div> 
+        {load && <div className="news">
         <Link to='/teachnology'>Teachnology</Link>
         <a>Covid-19</a>
-        </div> : <></>
-        }   
-        
+        </div> 
+        }  
+        {mobileNavbar && <Mnavbar/>}
         </div>
     )
 }
