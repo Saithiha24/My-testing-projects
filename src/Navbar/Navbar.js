@@ -34,7 +34,7 @@ const handleload = ()=>{
             {settext('example');
             dispatch(serchText(text));
             }} >Home</Link> 
-          <a href="#" onClick={handleload}>News</a>
+          <h2 onClick={handleload}>News</h2>
           <Link to='/developer'>Developers</Link>
           <h2 onClick={()=>{setnavload(!navload)}}><i className="fas fa-search"></i></h2>
           </div> :
