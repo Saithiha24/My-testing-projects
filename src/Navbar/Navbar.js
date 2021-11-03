@@ -54,7 +54,6 @@ const handleload = ()=>{
           </div> 
         {load && <div className="news">
         <Link to='/teachnology'>Teachnology</Link>
-        <a>Covid-19</a>
         </div> 
         }  
         {mobileNavbar && <Mnavbar/>}
